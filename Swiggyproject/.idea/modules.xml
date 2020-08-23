@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../GoodsProject/.idea/GoodsProject.iml" filepath="$PROJECT_DIR$/../GoodsProject/.idea/GoodsProject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Project26/.idea/Project26.iml" filepath="$PROJECT_DIR$/../../Project26/.idea/Project26.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Project44/.idea/Project44.iml" filepath="$PROJECT_DIR$/../Project44/.idea/Project44.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Swiggyproject.iml" filepath="$PROJECT_DIR$/.idea/Swiggyproject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../lastfood/.idea/lastfood.iml" filepath="$PROJECT_DIR$/../../lastfood/.idea/lastfood.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Naveen sir Django/Database/shoppingproject/.idea/shoppingproject.iml" filepath="$PROJECT_DIR$/../Naveen sir Django/Database/shoppingproject/.idea/shoppingproject.iml" />
+    </modules>
+  </component>
+</project>

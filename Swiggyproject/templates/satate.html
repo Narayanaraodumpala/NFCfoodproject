@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+  <div align="center">
+      {% include 'index.html' %}
+  </div>
+  <table align="center">
+      <tr>
+          <th>
+              {% include 'navs.html' %}
+          </th>
+      </tr>
+  </table><br><br><br><br>
+<div align="center">
+  <form action="{% url 'save_state' %}" method="post">
+      {% csrf_token %}
+
+  {{ form.as_p }}
+
+  <div ><button type="submit" class="btn btn-primary">Submit</button> </div>
+  </form>
+  <br><br>
+</div>
+<h1 align="center" style="background-color: blue;color: white">Update State</h1>
+
+<table align="center">
+     <tr>
+      <th>
+          <form action="{% url 'update_save_state' %}" method="post">
+              {% csrf_token %}
+   State_no=<input  type="hidden" value="{{ update_data.sno }}" name="s1">{{ update_data.sno }}<br>
+     State_Name= <input type="text" value="{{ update_data.sname }}" required name="s2">
+         <div align="center"><button type="submit">Save</button> </div>
+          </form>
+      </th>
+
+  </tr>
+</table>
+
+
+<table align="center" border="2">
+  <tr >
+      <th>
+      State no
+      </th>
+      <th>
+          State Name
+      </th>
+       <th>
+ Update
+      </th>
+      <th>
+        Delete
+      </th>
+  </tr>
+{% for x in Sate_Mo %}
+
+
+ <tr style="color: gold">
+
+
+  <th>
+      {{ x.State_no }}
+  </th>
+  <th>
+      {{ x.State_Name }}
+  </th>
+      <th>
+    <a href="{% url 'update_sate' %}?s_no={{ x.State_no }}&s_name={{ x.State_Name }}">Update</a>
+      </th>
+      <th>
+        <a href="{% url 'delate_sate' %}?s_no={{ x.State_no }}&s_name={{ x.State_Name }}">Delate</a>
+      </th>
+ </tr>
+
+
+      {% endfor %}
+</table>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+
+</html>

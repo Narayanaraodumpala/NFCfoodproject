@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  </head>
+  <body style="padding: 10px;margin: 0px 30px  0px 30px">
+{% include 'index.html' %}
+<pre>
+    <form action="{% url  'check_out_login' %}" method="post">
+        {% csrf_token %}
+
+    <b style="font-size: 20px"><i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Already registerd ..Login</i></b>
+    <input required class="form-control " type="text" name="name" placeholder="Enter YOur Name ">
+<input required class="form-control " type="email" name="email" placeholder="Enter Your Email">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn btn-outline-primary">&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;</button>
+
+           {% if mesg %}
+              <b style="color: red">{{ mesg }}</b>
+            {% endif %}
+
+         </form>
+</pre>
+<table align="center">
+    <tr>
+        <th width="1000">
+          <form action="{% url 'save_check_out'  %}" method="post">
+    {% csrf_token %}
+    <span style="font-size: 20px"><h5 >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regester Now For  Booking</h5></span><br>
+<div class="row">
+		<div class="col-lg-6">
+			<div class="box-element" id="form-wrapper">
+				<form id="form"  >
+					<div id="user-info" >
+						<div class="form-field" >
+							<input required class="form-control " type="text" name="name" placeholder="Name..">
+                        </div><br>
+						<div class="form-field" >
+ <input required class="form-control " type="email" name="email" placeholder="Email..">
+						</div >
+						</div>
+
+
+					<div id="shipping-info">
+						<hr>
+						<p>Shipping Information:</p>
+						<hr>
+						<div class="form-field">
+							<input class="form-control" type="text" name="address" placeholder="Address..">
+						</div><br>
+						<div class="form-field">
+							<input class="form-control" type="text" name="city" placeholder="City..">
+						</div><br>
+						<div class="form-field">
+							<input class="form-control" type="text" name="state" placeholder="State..">
+						</div><br>
+						<div class="form-field">
+							<input class="form-control" type="text" name="zipcode" placeholder="Zip code..">
+						</div><br>
+						<div class="form-field">
+							<input class="form-control" type="text" name="country" placeholder="Country">
+						</div><br>
+					</div>
+
+					<hr>
+					<input id="form-button" class="btn btn-success btn-block" type="submit" value="Continue">
+				</form>
+			</div>
+        </div>
+</div>
+</form>
+        </th>
+    </tr>
+</table>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

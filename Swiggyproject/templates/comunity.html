@@ -1,0 +1,97 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>LoveFood</title>
+  </head>
+  <body>
+    <form action="{% url 'search' %}" method="post">
+      {% csrf_token %}
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="serach" class="form-control"  placeholder=" Search for veg , chicken, muttun , paneer , dum, mushroom biryanies,friderices and drinks and ice creams "><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button type="submit" class="btn btn-outline-warning" >Search</button>
+  </form>
+  {% include 'index.html' %}
+    <div>
+ &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img width="30" height="30" src="{% static 'login.jpg' %}"><a href="{% url 'admin_login' %}"> &nbsp; Admin login</a><br>
+  </div>
+  <br><br>
+  <br><br><br><br><br><br><br>
+   <div >
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'home' %}"> Home</a>
+  </div><br><br><br><br><br>
+  <table align="center" style="border-top: 1px solid sandybrown">
+      <tr>
+          <th style="border-left: 3px solid sandybrown">
+              Which work-from-home personality are you ?<br>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="{% static 'comunity 2.png' %}" width="300" height="300"><br>
+              The times are such that most of us now have to work from home. While some of us find comfort in not having to go to work, others find it difficult to make it through the day. But you gotta do what you gotta do. If you too are working from home and miss having someone around, we’ve got your favourite company: food!<br>
+
+Read on to see which work-from-home personality matches your style and which dish goes best with your vibe!<br>
+              <h5 style="color:goldenrod;"> 1. The OG procrastinator</h5><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="{% static 'community 3.png' %}" width="300" height="300"><br>
+              They don’t set an alarm and wakes up on their own time. They do things at their own pace and try to avoid connecting with their peers for work. They need a break every half an hour and their lunch time <br> turns into one-more-episode-before-I-start cycle. A thali will be the perfect meal, so they can savour it at their own speed.<br>
+
+              <h5 style="color:goldenrod;">2 . The message flooder</h5>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <img src="{% static 'comunity 6.png' %}" width="300" height="300"><br>
+              These are the proactive ones who are always on their toes, sorry fingertips. Your work notifications don’t stop ringing, thanks to them. They are the first one to read all messages on the office group and their reply game is strong AF. Although they’ve got all the energy they need, some coffee will keep them powering through the day!<br><br>
+              These are the ones who don’t just work efficiently but also manage to clean their house, get supplies from the market, walk their dogs and even find the time to watch their favourite shows while they’re at it. Just because they like everything perfect, a plate of biryani will work it for them!
+
+          </th>
+          <th style="border-left: 2px solid sandybrown">
+              Nara: An Elevated Izakaya Experience Amidst Jakarta’s Entertainment Hub <br>
+               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <img src="{% static 'comumity1.jpg' %}" width="300" height="300"><br>
+              From a quick weekday lunch to an energetic night-out, Nara can give you the wholesome of Japanese entertainment experience. It is located in Jakarta’s heart of entertainment boutiques, Nara stands tall, signifying itself in a cozy izakaya-style three-storey building.<br>
+              Izakayas are known to be informal and cozy, however, Nara has elevated it to be a fine dining izakaya, with a complete Japanese entertainment experience<br>
+              of Japanese fusion dishes, complemented by a megamix of karaoke, and Japanese<br>
+
+              finest whiskeys and sake selections. On the first floor, the interplay <br>
+              between an open bar concept and hanging chandelier, accompanied by wooden and ceramic <br>interiors speaks out sophistication yet serene.<br> The bamboo greenery decor adds up coziness to the ambiance too. The second floor provides a larger seating area, suitable for large family gatherings, corporate meetings,<br>
+              or even casual lunch breaks from work while enjoying Jakarta’s skyline<br> through their large windows, <br>Getting late and fancy an alcoholic beverage? Get to the third floor,<br> where nightly live music and DJ playlists will be able to entertain the pub crawlers.<br>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="{% static 'comunity 7.jpg' %}" width="300" height="300"><br>
+              When Zomato’s foodies get invited to a meetup, we could not be more ecstatic. It was the perfect Sunday for Nara’s cozy vibes and sumptuous Japanese fusion. We commenced the brunch with an appetizer of Chutoro Taco, a 4-piece dish of crispy wonton skin tacos filled with diced spicy chutoro, a moderately-fat tuna, and mashed avocado. Moving on to entrees, we were able to choose<br> from four fantastic different selections; Tiger Prawn Sandwich, creamy, tiger prawn sandwiches
+          The Ritz-Carlton Pacific Place’s Pasola elevated Sunday buffet brunches to a whole new level! The inspiration came from the farm-to-table concept, and Executive Chef Sean MacDougall<br> and his team highlighted a quintessential marriage between Indonesian farmers’ freshest ingredients and food artisans’ creativity.<br><br> The buffet exhibited the union uniquely, in a series of tantalizing international selections, friendly local flavors and the fusion of the two. <br>To celebrate this, Pasola invited Zomato and Zomato foodies to enjoy a range of delightful appetizers, main courses, pass around and desserts.
+
+
+          </th>
+          <th style="border-left: 2px solid sandybrown">
+              Terms & Conditions for Win A $250 Coles Group & Myer Gift Card <br>
+             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <img src="{% static 'community 4.png' %}" width="300" height="300"><br>
+              The following Terms and Conditions (“Terms of Use”) are applicable to you (“Entrant”)<br> for participation in the Competition titled Win A $250 Coles Group & Myer Gift Card (“Competition”) conducted by RNFC<br> Australia Pty Limited (“Zomato”). Zomato is offering you the opportunity to win a $250 Coles Group & Myer gift card (“Prize”).<br> Fill out the survey form and describe Zomato Gold in one word and once you accept,<br> you automatically enter yourself in the draw to win the Prize. Participation in the <br> Competition shall be subject to acceptance of these Terms of Use.
+<br>
+              The Entrant(s) to this Competition must be 18 years and above and a resident of Australia.<br>
+
+The Competition will start on March 19th, 2020 at 1:00 pm AEST and will end on March 23rd, 2020 at 11:59 pm AEST. Any entries beyond the last date won’t be acceptable.
+
+Entrant understands that participating in this Competition is a willful decision and is legally competent to enter into the Competition under the laws of Australia.<br>
+
+Entrant hereby represents and warrants that they shall provide its complete and correct information including and not limited to the contact details, <br>email ID, telephone number, age, sex and complete postal/ correspondence address.
+
+You can participate in the Competition by entering the survey form in the manner prescribed therein.<br>
+                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img src="{% static 'comunity 8.png' %}" width="300" height="300"><br>
+              It is mandatory to submit the form in accordance with the applicable Terms and Conditions detailed herein, without which the Entrant’s Entry will not be considered as valid.<br>
+
+Winner of this Competition (“Winner”) shall be announced on March 24th, 2020 and the Winner will be notified via email within three (3) business days.<br><br>
+
+Winner of this Competition (“Winner”) shall be decided by a panel of judges constituted to decide on the basis of uniqueness of the entry. <br>
+              The decision of the panel will be final and binding upon the Entrants. Entrant acknowledges that they shall not dispute the decision of the panel.
+
+Winner of this Competition will receive the Prize as detailed hereunder :
+
+
+          </th>
+      </tr>
+  </table>
+    {%  include 'about.html' %}
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

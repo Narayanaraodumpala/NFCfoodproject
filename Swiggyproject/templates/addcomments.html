@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title >
+nfc
+    </title>
+         <style type='text/css'>
+          p{
+
+          text-align:center;
+width:60%;
+margin:0px auto;
+padding:50px 100px;
+border-radius: 250px 0 250px 0;
+
+/* Permalink - use to edit and share this gradient:
+background: rgb(252,236,252); /* Old browsers */
+background: -moz-radial-gradient(center, ellipse cover,  rgba(252,236,252,1) 0%, rgba(251,166,225,1) 50%, rgba(253,137,215,1) 51%, rgba(255,124,216,1) 100%); /* FF3.6-15 */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(252,236,252,1) 0%,rgba(251,166,225,1) 50%,rgba(253,137,215,1) 51%,rgba(255,124,216,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: radial-gradient(ellipse at center,  rgba(252,236,252,1) 0%,rgba(251,166,225,1) 50%,rgba(253,137,215,1) 51%,rgba(255,124,216,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcecfc', endColorstr='#ff7cd8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+
+}
+
+      </style>
+</head>
+    <body>
+<h3 align=" center" style="color: red"> Welcome to the Add Comments Blog</h3>
+<form action="{% url 'save_comment' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+
+    <div align="center">
+        {{ form.as_p }}`<br>
+       <div align="center"><button type="submit"  class="btn btn-outline-secondary add-btn  ">Submit</button> </div>
+
+    </div>
+    </form>
+  <div align="center">
+        {% if msg %}
+            {{ msg }}
+        {% endif %}
+    </div>
+ <div align="left">
+        {% for res in res %}
+<img src="{{ res.image.url }}" width="60" height="60">
+            <p class='a'>{{ res.comment}}<br><br>
+           - Commented by <span style="color:blue;" >{{ res.user }}</span> at <b>{{ res.timestamp }}</b>
+
+            </p><br>
+
+        {% endfor %}
+    </div>
+
+</body>
+
+</html>

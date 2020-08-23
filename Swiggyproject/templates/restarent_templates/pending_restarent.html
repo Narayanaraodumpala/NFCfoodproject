@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+<div align="center">
+      {% include 'index.html' %}
+  </div>
+<div align="center">
+            {% include 'navs.html' %}
+</div>
+
+<table align="center" >
+    <tr>
+        <th style="font-size: 40px;font-family: 'Californian FB'">
+            Admin  pending restaurent  page
+        </th>
+    </tr>
+</table>
+<br><br>
+<table align="center" border="2">
+    <tr>
+
+    <th>
+ id
+    </th>
+
+    <th>
+        Name
+    </th>
+    <th>
+        Email
+    </th>
+    <th>
+        COntact
+    </th>
+    <th>
+        OTP
+    </th>
+    <th>
+        Status
+    </th>
+    <th>
+         Type Of Place
+    </th>
+    <th>
+        Area
+    </th>
+        <th>
+            Update
+        </th>
+        <th>
+            Cancel
+        </th>
+        </tr>
+    {% for x in data %}
+       <tr>
+       <th>
+           {{ x.Restaurant_Id }}
+       </th>
+       <th>
+           {{ x.Restaurant_Name }}
+       </th>
+       <th>
+           {{ x.Restaurant_Email }}
+       </th>
+           <th>
+           {{ x.Restaurant_Contact_No }}
+       </th>
+       <th>
+           {{ x.Restaurant_Otp }}
+       </th>
+       <th>
+           {{ x.Restaurant_Type }}
+       </th>
+           <th style="color: yellow">
+           {{ x.Restaurant_Status }}
+       </th>
+       <th>
+           {{ x.Restaurant_Area }},<br>
+           {{ x.Restaurant_Area.City_Name }},<br>
+           {{ x.Restaurant_Area.City_Name.State_Name }}
+       </th>
+<th>
+    <a href="{% url 'approve_restarent' %}?restno={{ x.Restaurant_Id }}" >Approve</a>
+</th>
+             <th>
+                 <a href="{% url 'cancel_restarent' %}?cn_rest={{ x.Restaurant_Id }}"> Cancel</a>
+        </th>
+       </tr>
+    {% endfor %}
+</table>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+
+</html>
